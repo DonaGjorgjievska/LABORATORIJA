@@ -1,0 +1,5 @@
+commit dbee1ba0d032fac5f3f4c34ea7907f7f6b409fef (HEAD -> logging, origin/master, master)
+Author: Dona Gjorgjievska <donagjorgjievska@gmail.com>
+Date:   Wed Mar 21 16:14:00 2018 +0100
+
+    created l1.txt
