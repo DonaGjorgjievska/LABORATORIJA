@@ -1,0 +1,274 @@
+
+Dona@DONA-LT MINGW64 ~
+$ cd Desktop
+
+Dona@DONA-LT MINGW64 ~/Desktop
+$ mkdir Lab1
+
+Dona@DONA-LT MINGW64 ~/Desktop
+$ git init
+Initialized empty Git repository in C:/Users/Dona/Desktop/.git/
+
+Dona@DONA-LT MINGW64 ~/Desktop (master)
+$ notepad l1.txt
+
+Dona@DONA-LT MINGW64 ~/Desktop (master)
+$ git
+usage: git [--version] [--help] [-C <path>] [-c name=value]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone      Clone a repository into a new directory
+   init       Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+   add        Add file contents to the index
+   mv         Move or rename a file, a directory, or a symlink
+   reset      Reset current HEAD to the specified state
+   rm         Remove files from the working tree and from the index
+
+examine the history and state (see also: git help revisions)
+   bisect     Use binary search to find the commit that introduced a bug
+   grep       Print lines matching a pattern
+   log        Show commit logs
+   show       Show various types of objects
+   status     Show the working tree status
+
+grow, mark and tweak your common history
+   branch     List, create, or delete branches
+   checkout   Switch branches or restore working tree files
+   commit     Record changes to the repository
+   diff       Show changes between commits, commit and working tree, etc
+   merge      Join two or more development histories together
+   rebase     Reapply commits on top of another base tip
+   tag        Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch      Download objects and refs from another repository
+   pull       Fetch from and integrate with another repository or a local branch
+   push       Update remote refs along with associated objects
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+
+Dona@DONA-LT MINGW64 ~/Desktop (master)
+$
+
+Dona@DONA-LT MINGW64 ~/Desktop (master)
+$
+
+Dona@DONA-LT MINGW64 ~/Desktop (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        Cetvrt Semestar/
+        Games/
+        Kompjuterski komponenti/
+        Koncepti na informaticko opstestvo/
+        Mediumi i komunikacii/
+        Softversko inzenjerstvo/
+        Tret Semestar/
+        auditoriski/
+        desktop.ini
+        l1.txt
+        my stuff/
+        predavanja/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Dona@DONA-LT MINGW64 ~/Desktop (master)
+$ cd Lab1
+
+Dona@DONA-LT MINGW64 ~/Desktop/Lab1 (master)
+$ git init
+Initialized empty Git repository in C:/Users/Dona/Desktop/Lab1/.git/
+
+Dona@DONA-LT MINGW64 ~/Desktop/Lab1 (master)
+$ notepad l1.txt
+
+Dona@DONA-LT MINGW64 ~/Desktop/Lab1 (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        l1.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Dona@DONA-LT MINGW64 ~/Desktop/Lab1 (master)
+$ git add l1.txt
+
+Dona@DONA-LT MINGW64 ~/Desktop/Lab1 (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   l1.txt
+
+
+Dona@DONA-LT MINGW64 ~/Desktop/Lab1 (master)
+$ git commit -m "created l1.txt"
+[master (root-commit) dbee1ba] created l1.txt
+ 1 file changed, 1 insertion(+)
+ create mode 100644 l1.txt
+
+Dona@DONA-LT MINGW64 ~/Desktop/Lab1 (master)
+$ git remote add origin https://github.com/DonaGjorgjievska/LABORATORIJA.git
+
+Dona@DONA-LT MINGW64 ~/Desktop/Lab1 (master)
+$ git push -u origin master
+Counting objects: 3, done.
+Writing objects: 100% (3/3), 234 bytes | 234.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/DonaGjorgjievska/LABORATORIJA.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+Dona@DONA-LT MINGW64 ~/Desktop/Lab1 (master)
+$ git branch logging
+
+Dona@DONA-LT MINGW64 ~/Desktop/Lab1 (master)
+$ git branch
+  logging
+* master
+
+Dona@DONA-LT MINGW64 ~/Desktop/Lab1 (master)
+$ git checkout logging
+Switched to branch 'logging'
+
+Dona@DONA-LT MINGW64 ~/Desktop/Lab1 (logging)
+$ notepad log.txt
+
+Dona@DONA-LT MINGW64 ~/Desktop/Lab1 (logging)
+$ git log
+commit dbee1ba0d032fac5f3f4c34ea7907f7f6b409fef (HEAD -> logging, origin/master, master)
+Author: Dona Gjorgjievska <donagjorgjievska@gmail.com>
+Date:   Wed Mar 21 16:14:00 2018 +0100
+
+    created l1.txt
+
+Dona@DONA-LT MINGW64 ~/Desktop/Lab1 (logging)
+$ notepad log.txt
+
+Dona@DONA-LT MINGW64 ~/Desktop/Lab1 (logging)
+$ git status
+On branch logging
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        log.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Dona@DONA-LT MINGW64 ~/Desktop/Lab1 (logging)
+$ git add log.txt
+
+Dona@DONA-LT MINGW64 ~/Desktop/Lab1 (logging)
+$ git commit -m "created log.txt"
+[logging 41726c6] created log.txt
+ 1 file changed, 5 insertions(+)
+ create mode 100644 log.txt
+
+Dona@DONA-LT MINGW64 ~/Desktop/Lab1 (logging)
+$ notepad log.txt
+
+Dona@DONA-LT MINGW64 ~/Desktop/Lab1 (logging)
+$ git stats
+git: 'stats' is not a git command. See 'git --help'.
+
+The most similar command is
+        status
+
+Dona@DONA-LT MINGW64 ~/Desktop/Lab1 (logging)
+$ git status
+On branch logging
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   log.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Dona@DONA-LT MINGW64 ~/Desktop/Lab1 (logging)
+$ git checkout -- log.txt
+
+Dona@DONA-LT MINGW64 ~/Desktop/Lab1 (logging)
+$ git status
+On branch logging
+nothing to commit, working tree clean
+
+Dona@DONA-LT MINGW64 ~/Desktop/Lab1 (logging)
+$ notepad log.txt
+
+Dona@DONA-LT MINGW64 ~/Desktop/Lab1 (logging)
+$ git push -u origin logging
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 441 bytes | 441.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/DonaGjorgjievska/LABORATORIJA.git
+ * [new branch]      logging -> logging
+Branch 'logging' set up to track remote branch 'logging' from 'origin'.
+
+Dona@DONA-LT MINGW64 ~/Desktop/Lab1 (logging)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+Dona@DONA-LT MINGW64 ~/Desktop/Lab1 (master)
+$ git merge logging
+Updating dbee1ba..41726c6
+Fast-forward
+ log.txt | 5 +++++
+ 1 file changed, 5 insertions(+)
+ create mode 100644 log.txt
+
+Dona@DONA-LT MINGW64 ~/Desktop/Lab1 (master)
+$ git push -u origin master
+Total 0 (delta 0), reused 0 (delta 0)
+To https://github.com/DonaGjorgjievska/LABORATORIJA.git
+   dbee1ba..41726c6  master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+Dona@DONA-LT MINGW64 ~/Desktop/Lab1 (master)
+$ git branch commands
+
+Dona@DONA-LT MINGW64 ~/Desktop/Lab1 (master)
+$
+
+Dona@DONA-LT MINGW64 ~/Desktop/Lab1 (master)
+$ git checkout commands
+Switched to branch 'commands'
+
+Dona@DONA-LT MINGW64 ~/Desktop/Lab1 (commands)
+$ notepad com1.txt
+
+Dona@DONA-LT MINGW64 ~/Desktop/Lab1 (commands)
+$ notepad com1.txt
+
+Dona@DONA-LT MINGW64 ~/Desktop/Lab1 (commands)
+$ notepad commands.txt
+
+Dona@DONA-LT MINGW64 ~/Desktop/Lab1 (commands)
+$
